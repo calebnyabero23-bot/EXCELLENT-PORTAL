@@ -1,0 +1,73 @@
+:root {
+    --eg-gold: #B59A5B;
+    --eg-green: #00A651;
+    --eg-teal: #1BBC9B;
+    --eg-txt-gold: #8a7310;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body, html { height: 100%; width: 100%; background-color: #f4f7f6; }
+
+.full-view { width: 100%; min-height: 100vh; position: relative; }
+.hidden { display: none !important; }
+
+/* LOGIN PAGE SCALE */
+#login-section {
+    background: linear-gradient(to bottom, var(--eg-gold), #153822);
+    display: flex; justify-content: center; align-items: center; padding: 15px;
+}
+.auth-box { background: #fff; width: 100%; max-width: 420px; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+.auth-header { padding: 40px; text-align: center; }
+#login-form { padding: 0 30px 30px; }
+.entry-group { margin-bottom: 25px; }
+.entry-group label { display: block; font-weight: 900; font-size: 18px; margin-bottom: 8px; color: #000; }
+.entry-group input { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 18px; }
+.auth-btn { width: 100%; padding: 18px; background: #3498db; color: #fff; border: none; font-size: 20px; font-weight: bold; cursor: pointer; border-radius: 5px; }
+.auth-footer { background: #EE1D23; color: white; text-align: center; padding: 15px; font-size: 14px; }
+
+/* PORTAL HEADER SCALE */
+.portal-header { background: var(--eg-gold); height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; position: sticky; top: 0; z-index: 1000; }
+#menu-btn { background: none; border: none; color: #fff; font-size: 40px; cursor: pointer; }
+.user-avatar { width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff; }
+
+.page-title-strip { background: #fff; padding: 20px; border-bottom: 1px solid #ddd; }
+.page-title-strip h2 { font-size: 24px; color: #333; }
+
+/* SIDEBAR DRAWER */
+.main-sidebar { position: fixed; top: 70px; left: -100%; width: 300px; height: calc(100vh - 70px); background: var(--eg-green); transition: 0.3s; z-index: 999; overflow-y: auto; }
+.main-sidebar.active { left: 0; }
+.nav-tag { color: #a5f3c5; font-size: 14px; font-weight: bold; padding: 25px 20px 10px; }
+.nav-item { width: 100%; background: none; border: none; color: #fff; text-align: left; padding: 18px 20px; display: flex; align-items: center; gap: 15px; font-size: 17px; cursor: pointer; }
+.nav-item.active, .nav-item:hover { background: rgba(0,0,0,0.2); }
+.logout-link { border-top: 1px solid rgba(255,255,255,0.1); color: #ffcccc; margin-top: 15px; }
+
+/* MAIN CONTENT SCALE FIX */
+.portal-main { padding: 15px; width: 100%; }
+.info-card { background: #fff; border-radius: 6px; margin-bottom: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; }
+.info-header { background: var(--eg-gold); color: white; padding: 18px; font-weight: bold; font-size: 20px; }
+.info-body { padding: 30px 20px; }
+.center { text-align: center; }
+
+.profile-circle { width: 150px; height: 150px; border-radius: 50%; border: 5px solid #3498db; margin: 0 auto 30px; overflow: hidden; }
+.field-row { margin-bottom: 20px; border-bottom: 1px dotted #ccc; padding-bottom: 10px; text-align: left; }
+.field-row label { display: block; font-weight: 900; font-size: 18px; color: #000; margin-bottom: 5px; }
+.p-val { font-size: 18px; font-weight: bold; min-height: 1.2em; }
+.gold-txt { color: var(--eg-txt-gold); }
+
+.action-btn { width: 100%; padding: 18px; background: var(--eg-teal); color: #fff; border: none; border-radius: 5px; font-weight: bold; font-size: 18px; cursor: pointer; margin-top: 15px; }
+
+/* TABLE SCALE */
+.table-x-scroll { overflow-x: auto; }
+.portal-table { width: 100%; border-collapse: collapse; min-width: 400px; }
+.portal-table th { background: #000; color: #fff; padding: 15px; text-align: left; font-size: 16px; }
+.no-memos { text-align: center; padding: 60px; color: #ff0000; font-weight: bold; font-size: 18px; }
+
+.final-footer { text-align: center; padding: 50px 20px; font-size: 14px; color: #888; }
+.blue { color: #3498db; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-sidebar { width: 85%; }
+    .entry-group label, .field-row label { font-size: 16px; }
+    .entry-group input, .p-val { font-size: 16px; }
+}
